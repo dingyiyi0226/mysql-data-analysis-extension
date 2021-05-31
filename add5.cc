@@ -4,7 +4,13 @@
 
 #include <mysql.h>
 
-extern "C" bool add5_init(UDF_INIT *inited,UDF_ARGS *args, char *message){
+extern "C" {
+    bool add5_init(UDF_INIT *inited,UDF_ARGS *args, char *message);
+    void add5_deinit(UDF_INIT *inited);
+    long long add5(UDF_INIT *inited, UDF_ARGS*args, char *is_null, char *error);
+}
+
+bool add5_init(UDF_INIT *inited,UDF_ARGS *args, char *message){
     if(args->arg_count != 1){
         strcpy(message, "add_5() can only accept one arg");
         return 1;
@@ -16,10 +22,10 @@ extern "C" bool add5_init(UDF_INIT *inited,UDF_ARGS *args, char *message){
     return 0;
 }
 
-extern "C" void add5_deinit(UDF_INIT *inited){
+void add5_deinit(UDF_INIT *inited){
 }
 
-extern "C" long long add5(UDF_INIT *inited, UDF_ARGS*args, char *is_null, char *error){
+long long add5(UDF_INIT *inited, UDF_ARGS*args, char *is_null, char *error){
     long long res = (*(long long *)args->args[0]);
     return res + 5;
 }
