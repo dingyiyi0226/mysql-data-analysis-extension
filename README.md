@@ -1,4 +1,4 @@
-# MySQL Data Analysis UDL
+# MySQL Data Analysis Package
 
 ## Usage
 
