@@ -1,5 +1,8 @@
 # MySQL UDF for Data Analysis
 
+## Prerequisite
+-   [GSL](https://www.gnu.org/software/gsl/) >= 2.5
+
 ## Usage
 
 ### Compile
