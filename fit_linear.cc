@@ -4,8 +4,7 @@
  *   Fit the data by Y = c0 + c1X
  *
  * Usage:
- *   FIT_LINEAR(`field`, interval_x)
- *   interval_x: the interval between two data points
+ *   FIT_LINEAR(`X`, `Y`)
  *
  * Return:
  *   A string of "c0 c1"
@@ -74,11 +73,9 @@ void fit_linear_clear(UDF_INIT *initid, char *is_null, char *error){
 
 void fit_linear_add(UDF_INIT *initid, UDF_ARGS *args, char *is_null, char *error){
     fit_linear_data *data = (fit_linear_data *)initid->ptr;
-    double value = *(double *)args->args[0];
-    double interval_x = *(double *)args->args[1];
 
-    data->data_x.push_back(data->length * interval_x);
-    data->data_y.push_back(value);
+    data->data_x.push_back(*(double *)args->args[0]);
+    data->data_y.push_back(*(double *)args->args[1]);
     data->length += 1;
 }
 
@@ -93,7 +90,7 @@ char *fit_linear(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long *
     gsl_fit_linear(data_x, 1, data_y, 1, data->length, &c0, &c1, &cov00, &cov01, &cov11, &sumsq);
 
     // return string should less than 255 bytes
-    std::string ret_str = std::to_string(c0) + " " +std::to_string(c1);
+    std::string ret_str = std::to_string(c0) + " " + std::to_string(c1);
     strcpy(result, ret_str.c_str());
     *length = ret_str.size();
 
