@@ -5,7 +5,7 @@
 Compile the source files
 
 ```
-gcc -shared <udf.so> -o <udf.cc> -fPIC `mysql_config --include` `gsl-config --libs`
+gcc -shared <udf.cc> -o <udf.so> -fPIC `mysql_config --include` `gsl-config --libs`
 cp <udf.so> `mysql_config --plugindir`  # need sudo
 ```
 
