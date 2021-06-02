@@ -22,7 +22,7 @@ bool mysum_init(UDF_INIT *initid,UDF_ARGS *args, char *message){
         return 1;
     }
     if (args->arg_type[0] != REAL_RESULT){
-        strcpy(message, "wrong argument type: MYSUM() requires a  REAL");
+        strcpy(message, "wrong argument type: MYSUM() requires a REAL");
         return 1;
     }
 
