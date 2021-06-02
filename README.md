@@ -2,22 +2,31 @@
 
 ## Usage
 
-Compile the source files
+### Compile
 
-```
-gcc -shared <udf.cc> -o <udf.so> -fPIC `mysql_config --include` `gsl-config --libs`
-cp <udf.so> `mysql_config --plugindir`  # need sudo
-```
+1.  Compile the source files via `make`
 
-Install/remove the function from MySQL
+    ```
+    make
+    ```
 
-```
-CREATE [AGGREGATE] FUNCTION <udf> RETURNS <STRING|INT|REAL> SONAME '<udf.so>';
-DROP FUNCTION <udf>;
-```
+2.  Install the library to MySQL
 
-To show the STRING type UDF correctly, run the MySQL server with `--binary-as-hex=0` flag. ([reference](https://bugs.mysql.com/bug.php?id=99480))
+    ```
+    sudo make install
+    ```
 
-```
-mysql -u root -p --binary-as-hex=0
-```
+### MySQL
+
+1.  Launch MySQL server with `--binary-as-hex=0` flag. ([reference](https://bugs.mysql.com/bug.php?id=99480))
+
+    ```
+    mysql -u root -p --binary-as-hex=0
+    ```
+
+2.  Install/Remove the function from MySQL
+
+    ```
+    CREATE [AGGREGATE] FUNCTION <func> RETURNS <STRING|INT|REAL> SONAME 'udf_gsl';
+    DROP FUNCTION <udf>;
+    ```
