@@ -16,3 +16,8 @@ CREATE [AGGREGATE] FUNCTION <udf> RETURNS <STRING|INT|REAL> SONAME '<udf.so>';
 DROP FUNCTION <udf>;
 ```
 
+To show the STRING type UDF correctly, run the MySQL server with `--binary-as-hex=0` flag. ([reference](https://bugs.mysql.com/bug.php?id=99480))
+
+```
+mysql -u root -p --binary-as-hex=0
+```
