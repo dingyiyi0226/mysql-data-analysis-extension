@@ -30,6 +30,6 @@
 2.  Install/Remove the function from MySQL
 
     ```
-    CREATE [AGGREGATE] FUNCTION <func> RETURNS <STRING|INT|REAL> SONAME 'udf_gsl';
+    CREATE [AGGREGATE] FUNCTION <func> RETURNS <STRING|INT|REAL> SONAME 'udf_gsl.so';
     DROP FUNCTION <udf>;
     ```
