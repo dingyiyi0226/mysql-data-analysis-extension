@@ -7,7 +7,7 @@
  *   STAT_MEAN(`X`)
  *
  * Return:
- *   A Double of mean value
+ *   mean value: double (REAL)
  *
  */
 

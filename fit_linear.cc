@@ -7,7 +7,7 @@
  *   FIT_LINEAR(`X`, `Y`)
  *
  * Return:
- *   A string of "c0 c1"
+ *   "c0 c1": char * (STRING)
  *
  */
 
