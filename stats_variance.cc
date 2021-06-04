@@ -1,13 +1,13 @@
 /* stats_variance function
  *
  * Description:
- *   Calculate the mean of `X`
+ *   Calculate the variance of `X`
  *
  * Usage:
  *   STATS_VARIANCE(`X`)
  *
  * Return:
- *   mean value: double (REAL)
+ *   variance: double (REAL)
  *
  */
 
@@ -73,7 +73,7 @@ double stats_variance(UDF_INIT *initid, UDF_ARGS *args, char *is_null, char *err
 
     double *values = data->data.data();  // convert vector to array
 
-    double mean = gsl_stats_variance(values, 1, data->data.size());
+    double variance = gsl_stats_variance(values, 1, data->data.size());
 
-    return mean;
+    return variance;
 }
