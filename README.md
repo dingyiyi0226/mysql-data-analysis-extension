@@ -21,15 +21,15 @@
 
 ### MySQL
 
-1.  Launch MySQL server with `--binary-as-hex=0` flag. ([reference](https://bugs.mysql.com/bug.php?id=99480))
+1.  Install/Uninstall functions from MySQL
+    
+    ```
+    mysql -u root -p < install.sql
+    mysql -u root -p < uninstall.sql
+    ```
+
+2.  Launch MySQL server with `--binary-as-hex=0` flag. ([reference](https://bugs.mysql.com/bug.php?id=99480))
 
     ```
     mysql -u root -p --binary-as-hex=0
-    ```
-
-2.  Install/Remove the function from MySQL
-
-    ```
-    CREATE [AGGREGATE] FUNCTION <func> RETURNS <STRING|INT|REAL> SONAME 'udf_gsl.so';
-    DROP FUNCTION <udf>;
     ```
