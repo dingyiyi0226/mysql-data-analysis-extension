@@ -1,3 +1,4 @@
 *.o
 *.so
 gen_data.py
+udf_template/
