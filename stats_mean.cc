@@ -4,7 +4,7 @@
  *   Calculate the mean of `X`
  *
  * Usage:
- *   STAT_MEAN(`X`)
+ *   STATS_MEAN(`X`)
  *
  * Return:
  *   mean value: double (REAL)
