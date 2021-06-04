@@ -15,7 +15,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <vector>
-#include <string>
 
 #include <mysql.h>
 #include <gsl/gsl_fit.h>
@@ -90,9 +89,8 @@ char *fit_linear(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long *
     gsl_fit_linear(data_x, 1, data_y, 1, data->length, &c0, &c1, &cov00, &cov01, &cov11, &sumsq);
 
     // return string should less than 255 bytes
-    std::string ret_str = std::to_string(c0) + " " + std::to_string(c1);
-    strcpy(result, ret_str.c_str());
-    *length = ret_str.size();
+
+    *length = sprintf(result, "%f %f", c0, c1);
 
     return result;
 }
