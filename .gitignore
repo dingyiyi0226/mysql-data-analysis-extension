@@ -1,4 +1,5 @@
 *.o
 *.so
 gen_data.py
+test.sql
 udf_template/

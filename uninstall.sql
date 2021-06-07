@@ -1,4 +1,5 @@
 DROP FUNCTION IF EXISTS fit_linear;
+DROP FUNCTION IF EXISTS fit_square;
 
 DROP FUNCTION IF EXISTS stats_mean;
 DROP FUNCTION IF EXISTS stats_variance;
