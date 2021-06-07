@@ -7,7 +7,7 @@ LIBS = $(shell gsl-config --libs)
 
 TARGET_LIB = udf_gsl.so
 
-SRCS = $(shell echo *.cc)
+SRCS = $(shell echo stats/*.cc) $(shell echo fit/*.cc)
 OBJS = $(SRCS:.cc=.o)
 
 all : $(TARGET_LIB)
@@ -23,4 +23,4 @@ install :
 	@cp $(TARGET_LIB) $(shell mysql_config --plugindir)
 
 clean :
-	@rm -rf $(TARGET_LIB) $(OBJS)
+	@rm -f $(TARGET_LIB) $(OBJS)
