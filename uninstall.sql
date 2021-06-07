@@ -9,3 +9,4 @@ DROP FUNCTION IF EXISTS stats_skew;
 DROP FUNCTION IF EXISTS stats_kurtosis;
 DROP FUNCTION IF EXISTS stats_covariance;
 DROP FUNCTION IF EXISTS stats_lag1_autocorrelation;
+DROP FUNCTION IF EXISTS stats_correlation;
