@@ -11,7 +11,7 @@ Otherwise, you have to modify the `INC` and `PLUGIN_DIR` variable in [Makefile](
 
 ```
 INC = -I/usr/local/mysql/include
-PLUGIN = /usr/local/mysql/lib/plugin
+PLUGIN_DIR = /usr/local/mysql/lib/plugin
 ```
 
 ## Usage
