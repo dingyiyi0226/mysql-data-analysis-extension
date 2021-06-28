@@ -7,7 +7,7 @@ An data analysis extension for MySQL server using [MySQL loadable function](http
 
 Make sure you have the `mysql_config` command. You can install it via `yum install mysql-devel`(on CentOS)
 
-Otherwise, you have to modify the `INC` and `PLUGIN_DIR` variable in [Makefile](Makefile)
+Otherwise, you have to modify the `INC` and `PLUGIN_DIR` variable in [Makefile](Makefile) with your path to mysql (`/usr/local/mysql`)
 
 ```
 INC = -I/usr/local/mysql/include
