@@ -13,3 +13,10 @@ CREATE AGGREGATE FUNCTION stats_kurtosis RETURNS REAL SONAME 'udf_gsl.so';
 CREATE AGGREGATE FUNCTION stats_covariance RETURNS REAL SONAME 'udf_gsl.so';
 CREATE AGGREGATE FUNCTION stats_lag1_autocorrelation RETURNS REAL SONAME 'udf_gsl.so';
 CREATE AGGREGATE FUNCTION stats_correlation RETURNS REAL SONAME 'udf_gsl.so';
+
+CREATE AGGREGATE FUNCTION stats_median RETURNS REAL SONAME 'udf_gsl.so';
+CREATE AGGREGATE FUNCTION stats_median_sorted RETURNS REAL SONAME 'udf_gsl.so';
+CREATE AGGREGATE FUNCTION stats_quantile_sorted RETURNS REAL SONAME 'udf_gsl.so';
+CREATE AGGREGATE FUNCTION stats_weight_avg RETURNS REAL SONAME 'udf_gsl.so';
+CREATE AGGREGATE FUNCTION stats_higher_confidence RETURNS REAL SONAME 'udf_gsl.so';
+CREATE AGGREGATE FUNCTION stats_lower_confidence RETURNS REAL SONAME 'udf_gsl.so';

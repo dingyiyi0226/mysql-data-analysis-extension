@@ -4,6 +4,7 @@ LDFLAGS = -shared
 
 INC = $(shell mysql_config --include) $(shell gsl-config --cflags)
 LIBS = $(shell gsl-config --libs)
+PLUGIN_DIR = $(shell mysql_config --plugindir)
 
 TARGET_LIB = udf_gsl.so
 
@@ -20,7 +21,7 @@ $(TARGET_LIB): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 install :
-	@cp $(TARGET_LIB) $(shell mysql_config --plugindir)
+	@cp $(TARGET_LIB) $(PLUGIN_DIR)
 
 clean :
 	@rm -f $(TARGET_LIB) $(OBJS)

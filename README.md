@@ -1,7 +1,17 @@
 # MySQL UDF for Data Analysis
 
 ## Prerequisite
+-   [MySQL community server](https://dev.mysql.com/downloads/mysql/) >= 8.0.0
 -   [GSL](https://www.gnu.org/software/gsl/) >= 2.5
+
+Make sure you have the `mysql_config` command. You can install it via `yum install mysql-devel`(on CentOS)
+
+Otherwise, you have to modify the `INC` and `PLUGIN_DIR` variable in [Makefile](Makefile)
+
+```
+INC = -I/usr/local/mysql/include
+PLUGIN = /usr/local/mysql/lib/plugin
+```
 
 ## Usage
 

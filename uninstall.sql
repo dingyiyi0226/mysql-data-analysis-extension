@@ -13,3 +13,10 @@ DROP FUNCTION IF EXISTS stats_kurtosis;
 DROP FUNCTION IF EXISTS stats_covariance;
 DROP FUNCTION IF EXISTS stats_lag1_autocorrelation;
 DROP FUNCTION IF EXISTS stats_correlation;
+
+DROP FUNCTION IF EXISTS stats_median;
+DROP FUNCTION IF EXISTS stats_median_sorted;
+DROP FUNCTION IF EXISTS stats_quantile_sorted;
+DROP FUNCTION IF EXISTS stats_higher_confidence;
+DROP FUNCTION IF EXISTS stats_lower_confidence;
+DROP FUNCTION IF EXISTS stats_weight_avg;
