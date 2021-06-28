@@ -1,0 +1,6 @@
+CREATE AGGREGATE FUNCTION stats_median RETURNS REAL SONAME 'udf_gsl.so';
+CREATE AGGREGATE FUNCTION stats_median_sorted RETURNS REAL SONAME 'udf_gsl.so';
+CREATE AGGREGATE FUNCTION stats_quantile_sorted RETURNS REAL SONAME 'udf_gsl.so';
+CREATE AGGREGATE FUNCTION stats_weight_avg RETURNS REAL SONAME 'udf_gsl.so';
+CREATE AGGREGATE FUNCTION stats_higher_confidence RETURNS REAL SONAME 'udf_gsl.so';
+CREATE AGGREGATE FUNCTION stats_lower_confidence RETURNS REAL SONAME 'udf_gsl.so';
