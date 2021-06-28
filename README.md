@@ -1,4 +1,5 @@
-# MySQL UDF for Data Analysis
+# MySQL Data Analysis Extension
+An data analysis extension for MySQL server using [MySQL loadable function](https://dev.mysql.com/doc/extending-mysql/8.0/en/adding-loadable-function.html)
 
 ## Prerequisite
 -   [MySQL community server](https://dev.mysql.com/downloads/mysql/) >= 8.0.0
